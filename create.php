@@ -6,13 +6,20 @@
     <?php
         if(isset($_GET['id'])){ ?>
         <a href="update.php?id=<?php echo $_GET['id']; ?>">update</a>
-        <form action="delete_process.php" method="POST">
-            <input type="hidden" name="id" value="<?$_GET['id']?>">
-            <input type="submit" value="delete">
-        </form>
     <?php
         }
     ?>
+    <form action="create_process.php" method="post">
+        <p>
+            <input type="text" name="title" placeholder="Title">
+        </p>
+        <p>
+            <textarea name="description" placeholder="Description"></textarea>
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
     <h2>
         <?php
         print_title();
